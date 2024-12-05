@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zor kitob👍</title>
+</head>
+<body>
+    <h1>Reviews List</h1>
+    <ul>
+        {% for review in reviews %}
+            <li>{{ review.reviewer_name }} rated "{{ review.book.title }}" {{ review.rating }}/5</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Robert Grin</title>
+</head>
+<body>
+    <h1>Authors List</h1>
+    <ul>
+        {% for author in authors %}
+            <li>{{ author.first_name }} {{ author.last_name }} - {{ author.biography }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

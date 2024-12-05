@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitoblar Ro‘yxati</title>
+</head>
+<body>
+    <h1>Kitoblar Ro‘yxati</h1>
+    <ul>
+        {% for book in books %}
+            <li>
+                <h2>{{ book.title }}</h2>
+                <p>Muallif: {{ book.author.first_name }} {{ book.author.last_name }}</p>
+                {% if book.cover_image_url %}
+                    <img src="{{ book.cover_image_url }}" alt="{{ book.title }}" style="width: 150px; height: auto;">
+                {% else %}
+                    <p>Rasm mavjud emas</p>
+                {% endif %}
+                <p>Janr: {{ book.genre }}</p>
+                <p>Qisqacha: {{ book.summary }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
